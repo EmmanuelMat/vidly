@@ -1,0 +1,42 @@
+@model Vidly.ViewModels.GenreMovieViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>@Model.title</h2>
+
+@using (Html.BeginForm("Save", "Movie"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new{@class="form-control"})
+        @Html.ValidationMessageFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ReleaseDate)
+        @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MMM yyyy}", new{@class="form-control"})
+        @Html.ValidationMessageFor(m => m.ReleaseDate)        
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Genre)  
+        @Html.DropDownListFor(m => m.Genre, new SelectList(Model.Genre, "Id", "Name"), "Select Genre", new{ @class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Genre)                
+    </div>
+
+     <div class="form-group">
+        @Html.LabelFor(m => m.NumberOnStuck)
+        @Html.TextBoxFor(m => m.NumberOnStuck, new{@class="form-control"})
+        @Html.ValidationMessageFor(m => m.NumberOnStuck)
+
+    </div>
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+} 

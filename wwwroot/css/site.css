@@ -1,0 +1,110 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a {
+    color: #d1d0d0
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.navleft {
+    width: 20%;
+}
+
+.navright {
+    width: 80%;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+    position: relative;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    /* Vertically center the text there */
+}
+
+table,
+tbody,
+th,
+td,
+tr {
+    border: 1px solid #d6cbcb98 !important;
+    width: 60%;
+}
+
+th {
+    padding: 0.7%
+}
+
+td {
+    padding: 0.7%;
+    transition: 2s;
+}
+
+td:hover {
+    background-color: #e9e8e8
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+.input-validation-error {
+    border: 2px solid red;
+}

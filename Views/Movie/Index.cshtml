@@ -1,0 +1,30 @@
+@model IEnumerable<Vidly.Models.Movie>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h1>Movies</h1>
+
+<button type="submit" class="btn btn-primary">
+    @Html.ActionLink("New Movie", "MovieForm", "Movie")
+</button>
+<table>
+    <tbody>
+        <tr>
+            <th>Movies</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(m.Name, "Edit", "Movie", new{id = m.Id})
+                    </td>
+                    <td>@m.Genre.Name</td>
+                </tr>
+            }
+        </tr> 
+    </tbody>
+</table>

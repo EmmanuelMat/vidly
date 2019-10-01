@@ -1,0 +1,14 @@
+@model Vidly.ViewModels.RandomMovieViewModel
+
+@{
+    ViewData["Title"] = "Random";
+}
+
+<h1>@Model.Movie.Name</h1>
+
+<uL>
+    @foreach (var item in Model.Customer)
+    {
+        <li>@item.Name</li>
+    }
+</uL>
